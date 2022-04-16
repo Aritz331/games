@@ -1,21 +1,35 @@
 <link rel="stylesheet" href="style.css"></link>
 <title>Download a game</title>
-<h1 style="color:gray;">Select a game to download it:</h1>
+<h1 style="color:gray; padding-left: 10px;">Select a game to download it:</h1>
 <script>var c = function(obj) { document.location = "https://github.com/Aritz331/gamesd/raw/main/" + obj.value; }</script>
 
 <style>
+      html {
+      overflow: hidden;
+      }
+      ::-webkit-scrollbar {
+      overflow: hidden;
+      }
+      /* Optional: show position indicator in red */
+      ::-webkit-scrollbar-thumb {
+      background: #FF0000;
+      }
+    </style>
+
+<style>
         select {
-                margin: 10px;
+                border-radius: 5px;
+                margin-left: 10px;
                 width: 150px;
                 padding: 5px 35px 5px 5px;
                 font-size: 16px;
-                border: 1px solid #CCC;
+                border: transparent;
                 height: 34px;
                 -webkit-appearance: none;
                 -moz-appearance: none;
                 appearance: none;
-                background-color:gray;
-                color:white;
+                background-color: gray;
+                color: white;
         }
 </style>
 
