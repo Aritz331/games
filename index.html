@@ -1,0 +1,31 @@
+<link rel="stylesheet" href="style.css"></link>
+<title>Download a game</title>
+<h1 style="color:gray;">Select a game to download it:</h1>
+<script>var c = function(obj) { document.location = "https://github.com/Aritz331/gamesd/raw/main/" + obj.value; }</script>
+
+<style>
+        select {
+                margin: 10px;
+                width: 150px;
+                padding: 5px 35px 5px 5px;
+                font-size: 16px;
+                border: 1px solid #CCC;
+                height: 34px;
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                background-color:gray;
+                color:white;
+        }
+</style>
+
+<form id="form" action="" method="get">
+<select name="game" onchange="c(this)">
+        <option value="" selected disabled hidden></option>
+        <option value="SC_CD1.iso">SafeCracker</option>
+        <!--<option value="">N/A</option>
+        <option value="">N/A</option>
+        <option value="">N/A</option>
+        <option value="">N/A</option>-->
+    </select>
+</form>
