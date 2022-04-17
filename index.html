@@ -5,23 +5,9 @@
         <body>
                 <h1 style="color:gray; padding-left: 10px">Paid games for free (minecrfat doesnt count)</h1>
                 <h1 style="color:gray; padding-left: 10px; line-height: 0.1;">Select a game to download:</h1>
-                <script>var c = function(obj) { document.location = "https://github.com/Aritz331/gamesd/raw/main/" + obj.value; }</script>
+                <script>var c = function(obj) { document.location = "https://github.com/" + $("select option:selected").data('user') + "/gamesd/raw/main/" + obj.value; }</script>
         </body>
 </head>
-
-
-<style>
-      html {
-      overflow: hidden;
-      }
-      ::-webkit-scrollbar {
-      overflow: hidden;
-      }
-      /* Optional: show position indicator in red */
-      ::-webkit-scrollbar-thumb {
-      background: #FF0000;
-      }
-    </style>
 
 <style>
         select {
@@ -41,10 +27,11 @@
         }
 </style>
 
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <form id="form" action="" method="get">
-<select name="game" onchange="c(this)">
+<select name="game" id="select" onchange="c(this)">
         <option value="" selected disabled hidden></option>
-        <option value="SC_CD1.iso">SafeCracker</option>
+        <option value="SC_CD1.iso" data-user="aritz331">SafeCracker</option>
         <!--<option value="">N/A</option>
         <option value="">N/A</option>
         <option value="">N/A</option>
