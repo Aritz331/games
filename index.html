@@ -1,12 +1,13 @@
 <link rel="stylesheet" href="/def/style.css"></link>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <title>Paid games for free | Aritz331_</title>
 <h1 style="color: gray; padding-left: 10px;"><del>Paid games for free (minecrfat doesnt count)<br>Select a game to download:</del><br><span style='font-family: Hack, monospace;'>> this site is deprecated and going to be removed in <span style="color: blue; font-family: serif">{<span style="color: black">null</span>}</span><span class="a">_</span></span></h1>
 <script>var c = function(obj) { document.location = "https://github.com/" + $("select option:selected").data('user') + "/gamesd/raw/main/" + obj.value; }</script>
 <script>
-$('html').on('DOMSubtreeModified', function(){
-	location.reload();
-});
+	$('html').on('DOMSubtreeModified', function(){
+		location.reload();
+	});
 </script>
 
 <style>
@@ -42,7 +43,6 @@ $('html').on('DOMSubtreeModified', function(){
 	}
 </style>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <form id="form" action="" method="get">
 <select name="game" id="select" onchange="c(this)" disabled>
         <option value="error" selected disabled>err0r</option>
