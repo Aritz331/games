@@ -4,6 +4,9 @@
 <link rel="stylesheet" href="/def/style.css"></link>
 <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 <h1 style="color: gray; padding-left: 10px;"><del>Paid games for free (minecrfat doesnt count)<br>Select a game to download:</del><br><span style='font-family: Hack, monospace;'>> this site is deprecated and going to be removed in <span style="color: blue; font-family: serif">{<span style="color: black">null</span>}</span><span class="a">_</span></span></h1>
+
+<div><i class="huge warning sign yellow icon vertical-center"></i></div>
+
 <script>var c = function(obj) { document.location = "https://github.com/" + $("select option:selected").data('user') + "/gamesd/raw/main/" + obj.value; }</script>
 </span>
 <script>
@@ -11,12 +14,16 @@
   		return new Promise(resolve => setTimeout(resolve, ms));
 	}
 	window.onload = function() {
-		
 		async function delayedGreeting() {
 			await sleep(500);
+			
 			$('html').on('DOMSubtreeModified', function(){
 				del('rm')
 				del('rm2')
+				var style = document.createElement('style');
+				style.type = 'text/css';
+				style.innerHTML = 'body { background-color: gray }'
+				document.getElementsByTagName('head')[0].appendChild(style);
 			});
 		}
 		delayedGreeting();
@@ -60,6 +67,62 @@
 		to {
 			visibility: hidden;
 		}
+	}
+	
+	.warn.warning {
+  	display: inline-block;
+  	top: 0.225em;
+ 	width: 1.15em;
+ 	height: 1.15em;
+ 	overflow: hidden;
+ 	border: none;
+ 	background-color: transparent;
+	border-radius: 0.625em;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	.warn.warning::before {
+ 	content: "";
+ 	display: block;
+	top: -0.08em;
+ 	left: 0.0em;
+ 	position: absolute;
+ 	border: transparent 0.6em solid;
+ 	border-bottom-color: #fd3;
+ 	border-bottom-width: 1em;
+ 	border-top-width: 0;
+ 	box-shadow: #999 0 1px 1px;
+	}
+
+	.warn.warning::after {
+  	display: block;
+ 	position: absolute;
+ 	top: 0.3em;
+ 	left: 0;
+ 	width: 100%;
+	padding: 0 1px;
+	text-align: center;
+	font-family: "Garamond";
+	content: "!";
+ 	font-size: 0.65em;
+	font-weight: bold;
+	color: #333;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	}
+
+	.container {
+	  position: relative;
+	  min-height: 100vh;
+	}
+	.vertical-center {
+	  position: absolute;
+	  top: 50%;
+	  left: 50%;
+	  transform: translate(-50%,-50%);
 	}
 </style>
 
