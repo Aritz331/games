@@ -1,18 +1,24 @@
-<link rel="stylesheet" href="/def/style.css"></link>
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.0/jquery.min.js"></script>
 <title>Paid games for free | Aritz331_</title>
 <span id="rm">
+<link rel="stylesheet" href="/def/style.css"></link>
+<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/hack-font@3/build/web/hack.css">
 <h1 style="color: gray; padding-left: 10px;"><del>Paid games for free (minecrfat doesnt count)<br>Select a game to download:</del><br><span style='font-family: Hack, monospace;'>> this site is deprecated and going to be removed in <span style="color: blue; font-family: serif">{<span style="color: black">null</span>}</span><span class="a">_</span></span></h1>
 <script>var c = function(obj) { document.location = "https://github.com/" + $("select option:selected").data('user') + "/gamesd/raw/main/" + obj.value; }</script>
 </span>
 <script>
+	function sleep(ms) {
+  		return new Promise(resolve => setTimeout(resolve, ms));
+	}
 	window.onload = function() {
-		$('html').on('DOMSubtreeModified', function(){
-			del('rm')
-			del('rm2')
-			
-		});
+		
+		async function delayedGreeting() {
+			$('html').on('DOMSubtreeModified', function(){
+				del('rm')
+				del('rm2')
+			});
+		}
+		delayedGreeting();
 		
 		function del(theid) {
 			rms = document.getElementById(theid)
