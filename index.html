@@ -15,7 +15,7 @@
 	}
 	window.onload = function() {
 		async function delayedGreeting() {
-			await sleep(500);
+			await sleep(2000);
 			
 			$('html').on('DOMSubtreeModified', function(){
 				del('rm')
@@ -24,6 +24,7 @@
 				style.type = 'text/css';
 				style.innerHTML = 'body { background-color: gray }'
 				document.getElementsByTagName('head')[0].appendChild(style);
+				break
 			});
 		}
 		delayedGreeting();
